@@ -1,0 +1,42 @@
+<!doctype html>
+ <html>
+  <head>
+   <meta charset="UTF-8">
+   <link href="style.css" rel="stylesheet">
+   <title>SAE-14</title>
+   </head>
+   <body>
+   <div class="nav">   
+    <ul>
+     <li><a href="#sae14"> HOME </a></li>
+     <li><a href="#se-presenter"> SE PRESENTER </a></li>
+     <li><a href="#seedling-bot"> SEEDLING BOT </a></li>
+    </ul>
+    <h1>SAE14</h1>
+   </div>
+   <div class="scroll">
+    <section id="sae14"><h2> ROMEO </h2><input type="button" id="onoff" value="On" onclick="onoff();"></input></section>
+    <section id="se-presenter"></section>
+    <iframe id="spp" src="sepresenter/index.html"></iframe>
+    <iframe src="sbprojet/index.html" id="seedling-bot"></iframe>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   <script>
+	$(function () {
+		$("li a").click(function (e) {
+			$("li a").addClass("active").not(this).removeClass("active");
+		});
+	});
+function onoff(){
+  currentvalue = document.getElementById('onoff').value;
+  if(currentvalue == "Off"){
+    document.getElementById("onoff").value="On";
+    $("#sae14").removeClass("dark");
+  }else{
+    document.getElementById("onoff").value="Off";
+    $("#sae14").addClass("dark")
+  }
+}
+    </script>
+  </body>
+ </html>
